@@ -122,10 +122,116 @@ ul li {
   margin-left: 8px;
 }
 /* banner section end */
+.all-image {
+  display: flex;
+  justify-content: space-around;
+  margin: 100px 0;
+}
+/* popular section start */
+#popular span {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  color: rgba(224, 44, 109, 0.87);
+  display: flex;
+  padding: 50px 0 100px;
+  justify-content: end;
+  align-items: center;
+}
+#popular span i {
+  margin-left: 8px;
+}
+#popular h3 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 250%;
+  color: #3a3a3a;
+  text-align: center;
+}
+.popular-all-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.popular-card {
+  border-radius: 5px;
+  max-width: 329px;
+  height: 476px;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+  background: #fff;
+  padding: 17px 15px;
+}
+.popular-card h4 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 143%;
+  color: #18191f;
+  padding-top: 16px;
+}
+.popular-card h5 {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 6px 0;
+}
+.popular-card i {
+  width: 16px;
+  height: 16px;
+  color: orange;
+  margin: 3px;
+}
+.popular-card p {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.02em;
+  color: #787885;
+}
+/* popular section end */
+/*  featured section start */
+#featured {
+  display: flex;
+  gap: 96px;
+}
+#featured h2 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 158%;
+  color: #0a0826;
+}
+#featured p {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 175%;
+  color: #6c6c6c;
+  padding: 16px 0;
+}
+#featured button {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 24px;
+  width: 155px;
+  height: 44px;
+  background: #e02c6d;
+  border: none;
+}
+#featured button i {
+  padding-left: 8px;
+}
+/*  featured section end */
 
-/* responsive */
+/* responsive 576px */
 @media screen and (max-width: 576px) {
-  /* navbar */
+  /* navbar start*/
   nav {
     display: none;
   }
@@ -135,8 +241,8 @@ ul li {
     align-items: center;
     padding: 35px 16px 22px;
   }
-  /* navbar */
-  /* banner */
+  /* navbar end*/
+  /* banner start*/
   #banner {
     flex-direction: column-reverse;
     gap: 22px;
@@ -155,9 +261,75 @@ ul li {
     text-align: center;
     color: #3a3a3a;
   }
-  .banner-content p{
+  .banner-content p {
     font-size: 14px;
   }
-  /* banner */
+  /* banner end*/
+  .all-image {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  /* popular start */
+  .popular-all-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* popular end */
+  /* featured start */
+  #featured {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 22px;
+  }
+  /* featured end */
 }
-/* responsive */
+
+/* responsive 576px*/
+/*  responsive 992px */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  /* navbar start*/
+  nav {
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  /* navbar end*/
+  /* banner start*/
+  #banner {
+    flex-direction: column-reverse;
+    gap: 22px;
+  }
+  #banner img {
+    width: 100%;
+  }
+  .banner-content {
+    text-align: center;
+    max-width: 530px;
+  }
+  /* banner end*/
+  .all-image {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  /* popular start */
+  .popular-all-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  /* popular end */
+  /* featured start */
+  #featured {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 22px;
+  }
+  /* featured end */
+}
+/*  responsive 992px */
